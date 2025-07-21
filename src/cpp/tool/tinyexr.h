@@ -4564,8 +4564,7 @@ namespace tinyexr {
             }
 
 #ifndef MINIZ_NO_ZLIB_APIS
-            static const mz_uint s_tdefl_num_probes[11] = { 0,   1,   6,   32,  16,  32,
-                                                           128, 256, 512, 768, 1500 };
+            static const mz_uint s_tdefl_num_probes[11] = { 0,   1,   6,   32,  16,  32, 128, 256, 512, 768, 1500 };
 
             // level may actually range from [0,10] (10 is a "hidden" max level, where we
             // want a bit more compression and it's fine if throughput to fall off a cliff
