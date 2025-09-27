@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (c) 2020-2025, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -436,13 +436,13 @@ namespace FLIPTool
                 std::transform(exitOnTestQuantity.begin(), exitOnTestQuantity.end(), exitOnTestQuantity.begin(), [](unsigned char c) { return std::tolower(c); });
                 if (exitOnTestQuantity != "mean" && exitOnTestQuantity != "weighted-median" && exitOnTestQuantity != "max")
                 {
-                    std::cout << "For --exit-test-parameters / -etp, the first paramter needs to be {MEAN | WEIGHTED-MEDIAN | MAX}\n";
+                    std::cout << "For --exit-test-parameters / -etp, the first parameter needs to be {MEAN | WEIGHTED-MEDIAN | MAX}\n";
                     exit(EXIT_FAILURE);
                 }
                 exitOnTestThresholdValue = std::stof(commandLine.getOptionValue("exit-test-parameters", 1));
                 if (exitOnTestThresholdValue < 0.0f || exitOnTestThresholdValue > 1.0f)
                 {
-                    std::cout << "For --exit-test-parameters / -etp, the second paramter needs to be in [0,1]\n";
+                    std::cout << "For --exit-test-parameters / -etp, the second parameter needs to be in [0,1]\n";
                     exit(EXIT_FAILURE);
                 }
             }
